@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+  }
+  
+#page-wrap {
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+#components-layout-demo-responsive .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.canvas {
+width: 500px;
+height: 500px;
+background-image: url(images/back.jpg);
+margin: 100px 400px;
+position: relative;
+}
+
+.logo {
+float: left;
+width: 50px;
+height: 40px;
+margin: 13px 24px 16px 0;
+background-color: rgb(162, 166, 170);
+position: relative;
+/* background-image: url('./images/blockchain.svg');
+background-repeat: no-repeat; */
+}
+
+.ant-row-rtl #components-layout-demo-top-side-2 .logo {
+float: right;
+margin: 16px 0 16px 24px;
+}
+

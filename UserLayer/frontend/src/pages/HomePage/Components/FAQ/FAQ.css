@@ -1,0 +1,115 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #EEE;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.faq-title, .faq-subtitle {
+    font-size: clamp(32px, 5vw, 52px);
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.faqs {
+    width: 100%;
+    max-width: 768px;
+    margin: 5px auto; /* Fixing typo */
+    padding-top: 20px;
+}
+
+.faqs .faq {
+    margin: 20px;
+    padding: 15px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faqs .faq .faq-question {
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: auto;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-align: left;
+    width: 100%;
+    transition: all 0.4s ease, background 0.2s ease; /* Add background transition */
+}
+
+.faqs .faq .faq-answer {
+    opacity: 0;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all 0.1s ease-out;
+}
+
+.faqs .faq.open .faq-question {
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.faqs .faq.open .faq-question::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faqs .faq.open .faq-answer {
+    max-height: 1000px;
+    opacity: 1;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: justify; /* Consider left-align for readability */
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    max-width: 100%; /* Ensure responsive image */
+}
+
+/* Adjusting FAQ for larger screens */
+@media (min-width: 1024px) {
+    .faqs .faq {
+        margin: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 15px;
+    }
+
+    .faqs .faq .faq-question {
+        font-size: 18px;
+        padding-right: 90px;
+    }
+}
+.faqs .faq .faq-question .toggle-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 10px;
+    position: absolute;
+    right: 10px;
+    background-image: url('./images/arrow-toggle-down.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(270deg);
+    filter: opacity(50%);
+}
+
+.faqs .faq.open .faq-question .toggle-icon {
+    transform: rotate(360deg);
+}
