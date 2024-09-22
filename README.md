@@ -44,5 +44,5 @@ Adoption – While the number of people involved in blockchain, crypto and publi
 | Andy Chih   | u7574003          | Full-stack developer   |
 | Songxuan Li   | u7756861          | Front-end developer, Back-end developer     | 
 | Linxi Li| u7095375          | UI designer, Full-stack developer    |
-| Bohong Sun   | u7546803          | DevOps engineer, Database developer  | 
+| Bohong Sun   | u7546803          | Full-stack developer  | 
 
